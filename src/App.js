@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Navbar dark color="primary">
-        <div className="container"><NavbarBrand href='/'>Ristorante Con fusion</NavbarBrand></div>
+        <div className="container"><NavbarBrand href='/'>Ristorante Con fusion App</NavbarBrand></div>
       </Navbar>
     </div>
   );
