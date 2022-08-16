@@ -22,6 +22,10 @@
   color:floralwhite;
 }
 
+.card{
+ cursor: pointer;
+}
+
 address{
   font-size:80%;
   margin:0px;
