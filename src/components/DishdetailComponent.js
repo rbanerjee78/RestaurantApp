@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, Label, Row, Col } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
+
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -39,7 +41,7 @@ class CommentForm extends Component {
 
             <React.Fragment>
                 <Button outline onClick={this.toggleCommentModal} className="btn btn-default">
-                    <span className="fa fa-sign-in fa-lg"></span> Submit Comment
+                    <span className="fa fa-pencil fa-lg"></span> Submit Comment
                 </Button>
 
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleCommentModal}>
@@ -116,7 +118,7 @@ function RenderDish({dish}) {
             
                 <div className='row'>
                     <Card >
-                        <CardImg width="100%" src={dish.image} alt={dish.name} />
+                    <CardImg top src={baseUrl + dish.image} alt={dish.name} />
                         <CardBody>
                             <CardTitle>{dish.name}</CardTitle>
                             <CardText>{dish.description}</CardText>
